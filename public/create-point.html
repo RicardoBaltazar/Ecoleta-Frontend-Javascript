@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../src/styles/index.css">
     <link rel="stylesheet" href="../src/styles/create-point.css">
+    <link rel="stylesheet" href="../src/styles/responsive.css">
     <title>Ecoleta</title>
 </head>
 
@@ -31,20 +32,20 @@
                 </legend>
 
                 <div class="field">
-                    <label for="namae">Nome da entidade</label>
-                    <input type="text" name="name" required>
+                    <label for="name">Nome da entidade</label>
+                    <input type="text" name="name" id="entityName" required>
                 </div>
 
                 <div class="field-group">
                     <div class="field">
                         <label for="address">Endereço</label>
-                        <input type="text" name="address" required>
+                        <input type="text" name="address" id="address" required>
                     </div>
                 </div>
 
                 <div class="field">
                     <label for="address2">Número/Complemento</label>
-                    <input type="text" name="address2" required>
+                    <input type="text" name="address2" id="address2" required>
                 </div>
 
                 <div class="field-group">
@@ -112,5 +113,6 @@
     </div>
 
     <script src="../src/scripts/create-point.js"></script>
+    <script src="../src/scripts/location.js"></script>
 </body>
 </html>

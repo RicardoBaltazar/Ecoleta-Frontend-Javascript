@@ -1,3 +1,29 @@
+var entityName = document.querySelector('#entityName')
+var address = document.querySelector('#address')
+var addressNumber = document.querySelector('#address2')
+var state = document.querySelector('select[name=uf]')
+var state2
+
+
+
+
+let ufSelect = document.querySelector('select[name=uf]')
+fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome')
+    .then(function (res) {
+        return res.json()
+    })
+    .then(function (states) {
+
+        for (const state of states) {
+            ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`
+            
+            state2 = state.name
+        }
+
+
+    })
+
+/*
 function populateUfs() {
     let ufSelect = document.querySelector('select[name=uf]')
     fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome')
@@ -14,6 +40,7 @@ function populateUfs() {
 }
 
 populateUfs()
+*/
 
 function getCities() {
     let citySelect = document.querySelector('select[name=city]')
@@ -42,10 +69,11 @@ function getCities() {
         })
 }
 
+
 document.querySelector('select[name=uf]').addEventListener('change', getCities)
 
-//itens de coleta
-//pegar todos os li's
+
+
 const ItemsToCollect = document.querySelectorAll('.items-grid li')
 
 for (let item of ItemsToCollect) {
