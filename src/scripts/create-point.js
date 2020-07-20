@@ -1,15 +1,23 @@
 var entityName = document.querySelector('#entityName')
 var address = document.querySelector('#address')
 var addressNumber = document.querySelector('#address2')
-var state = document.querySelector('select[name=uf]')
+//var state = document.querySelector('select[name=uf]')
+var state = document.querySelector('#uf')
+//var city = document.querySelector('select[name=city]')
+var city = document.querySelector('#city')
 var buttonForm = document.querySelector('form')
 
 //talvez tenha que pegar o ID mesmo, e na página de search, chamar a api da localização novamente
 //para tranformar o id no nome  do estado e cidade
 
+function cityEnabled(){
+    city.removeAttribute('disabled')
+}
+
+state.addEventListener('change', cityEnabled)
 
 
-
+/*
 let ufSelect = document.querySelector('select[name=uf]')
 fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome')
     .then(function (res) {
@@ -25,7 +33,7 @@ fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome'
 
     })
 
-/*
+
 function populateUfs() {
     let ufSelect = document.querySelector('select[name=uf]')
     fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome')
@@ -42,7 +50,7 @@ function populateUfs() {
 }
 
 populateUfs()
-*/
+
 
 function getCities() {
     let citySelect = document.querySelector('select[name=city]')
@@ -72,7 +80,7 @@ function getCities() {
 }
 
 
-document.querySelector('select[name=uf]').addEventListener('change', getCities)
+*/
 
 
 
@@ -124,6 +132,12 @@ function handleSelectedItem() {
 buttonForm.addEventListener('submit', function(event){
     event.preventDefault()
     
+    console.log(entityName.value)
+    console.log(address.value)
+    console.log(addressNumber.value)
+    console.log(state.value)
+    console.log(city.value)
+    console.log(selectedItems)
 
     let body = {
         //"id": 3,
@@ -131,8 +145,8 @@ buttonForm.addEventListener('submit', function(event){
         "address": address.value,
         "address2": addressNumber.value,
         "state": state.value,
-        /*"city": city.value, 
-        'items' : selectedItems*/
+        "city": city.value, 
+        'items' : selectedItems
     }
 
     fetch('http://localhost:8000/posts', {
