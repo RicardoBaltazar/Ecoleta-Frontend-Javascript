@@ -66,9 +66,14 @@
     }
 
     .items-grid{
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 16px;
+    }
+}
+
+@media(max-width: 375px){
+
+    .items-grid{
+        grid-template-columns: 1fr;
     }
 }
 
@@ -83,5 +88,13 @@
         margin-top: 48px    
     }
 
+    .page-create-point form {
+        padding: 25px;  
+    }
+
+    form input {
+
+        padding:  16px 0px;
+    }
 
 }

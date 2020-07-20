@@ -35,7 +35,7 @@ main{
 
 main h4{
     font-weight: normal;
-    font-family: roboto, sans-serif;
+    font-family: 'roboto', sans-serif;
     margin-bottom: 32px;
 }
 
@@ -53,8 +53,8 @@ main .card img{
 }
 
 main .card h1{
-    font-family: roboto, sans-serif;
-    margin-top: 32px;
+    font-family: 'roboto', sans-serif;
+    margin-top: 20px;
     font-size: 36px;
     line-height: 41px;
     color: #322153;
@@ -62,7 +62,7 @@ main .card h1{
 
 main .card h3{
     margin-top: 24px 0;
-    font-family: roboto;
+    font-family: 'roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -72,7 +72,7 @@ main .card h3{
 
 main .card p{
     font-size: 16px;
-    line-height: 26px;
+    line-height: 18px;
     color: #6c6c80;
     margin-bottom: 50px;
 }
