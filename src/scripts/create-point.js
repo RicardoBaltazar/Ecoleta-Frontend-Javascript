@@ -2,7 +2,10 @@ var entityName = document.querySelector('#entityName')
 var address = document.querySelector('#address')
 var addressNumber = document.querySelector('#address2')
 var state = document.querySelector('select[name=uf]')
-var state2
+var buttonForm = document.querySelector('form')
+
+//talvez tenha que pegar o ID mesmo, e na página de search, chamar a api da localização novamente
+//para tranformar o id no nome  do estado e cidade
 
 
 
@@ -17,7 +20,6 @@ fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome'
         for (const state of states) {
             ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`
             
-            state2 = state.name
         }
 
 
@@ -118,3 +120,32 @@ function handleSelectedItem() {
     //atializar o campo escondido com os itens selecionados
     collectedItems.value = selectedItems
 }
+
+buttonForm.addEventListener('submit', function(event){
+    event.preventDefault()
+    
+
+    let body = {
+        //"id": 3,
+        "ponto": entityName.value,
+        "address": address.value,
+        "address2": addressNumber.value,
+        "state": state.value,
+        /*"city": city.value, 
+        'items' : selectedItems*/
+    }
+
+    fetch('http://localhost:8000/posts', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'    },
+    body: JSON.stringify(body),
+    })
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(response){
+        console.log('Success: ', JSON.stringify(response))
+    })
+    .catch(error => console.error('Error:', error))
+
+})
