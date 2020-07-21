@@ -28,7 +28,7 @@
     background-color: #fff;
 }
 
-.modal .header h2   {
+.modal .header h3   {
     color: var(--primary-color);
     font-size: 36px;
     line-height: 42px
