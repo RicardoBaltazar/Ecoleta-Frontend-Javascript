@@ -7,6 +7,10 @@ var state = document.querySelector('#uf')
 var city = document.querySelector('#city')
 var buttonForm = document.querySelector('form')
 
+
+let modal = document.querySelector('.modal')
+
+
 //talvez tenha que pegar o ID mesmo, e na página de search, chamar a api da localização novamente
 //para tranformar o id no nome  do estado e cidade
 
@@ -81,6 +85,14 @@ function getCities() {
 
 
 */
+
+
+function showModalConfirm(){
+    modal.classList.remove('hide')
+    setTimeout(function(){
+        modal.classList.add('hide')
+    }, 2750)
+} 
 
 
 
@@ -162,4 +174,16 @@ buttonForm.addEventListener('submit', function(event){
     })
     .catch(error => console.error('Error:', error))
 
+    showModalConfirm()
+
 })
+
+//modal
+
+/*
+modal.style.display = 'none'
+
+let modalConfirnm = setTimeout(function(){
+    modal.style.display = 'none'
+}, 2000)
+*/
