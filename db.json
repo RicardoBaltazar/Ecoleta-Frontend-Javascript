@@ -1,31 +1,17 @@
 {
   "posts": [
     {
-      "ponto": "d",
-      "address": "d",
-      "address2": "d",
-      "state": "",
-      "city": "",
-      "items": [],
+      "ponto": "Primeiro Ponto",
+      "address": "Rua 1",
+      "address2": "123456",
+      "state": "RS",
+      "city": "Porto Alegre",
+      "items": [
+        "Pilhas e Baterias",
+        "Resíduos Orgânicos",
+        "Papéis e Papelão"
+      ],
       "id": 1
-    },
-    {
-      "ponto": "s",
-      "address": "sdfsdfs",
-      "address2": "s",
-      "state": "",
-      "city": "",
-      "items": [],
-      "id": 2
-    },
-    {
-      "ponto": "q",
-      "address": "q",
-      "address2": "q",
-      "state": "",
-      "city": "",
-      "items": [],
-      "id": 3
     }
   ]
 }
