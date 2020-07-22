@@ -41,7 +41,7 @@ $ npm install -g json-server
 # Abra o terminal na pasta do projeto e inicie o Json Server na porta 8000
 $ json-server --watch db.json --port 8000
 
-# O servidor inciará na porta:8000 - acesse http://localhost:8000/posts
+# O API inciará na porta:8000 - acesse http://localhost:8000/posts
 ```
   
 ### license  
