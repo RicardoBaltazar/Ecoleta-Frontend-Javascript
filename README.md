@@ -20,29 +20,14 @@ As seguintes ferramentas foram usadas na construção do projeto:
   
 ![ecoleta](https://user-images.githubusercontent.com/56805229/88117140-b3c54300-cb90-11ea-9757-184ecb1d64f7.gif)  
   
+### API  
+Este projeto utiliza uma Api criada com json Server para guardar e manipular os dados cadastrados.  
+Api para consultar os dados https://api-ecoleta-jsonserver.herokuapp.com/posts  
+Repositório com o código da Api https://github.com/RicardoBaltazar/Api-Ecoleta
+  
 ### Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+   
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
-
-### 🎲 Rodando o Back End (servidor)
-
-```bash
-# Clone este repositório
-$ git clone https://github.com/RicardoBaltazar/Ecoleta-Frontend-Javascript
-
-# Acesse a pasta do projeto no terminal/cmd
-$ cd Ecoleta-Frontend-Javascript
-
-# Instale o json server usando npm
-$ npm install -g json-server
-
-# Abra o terminal na pasta do projeto e inicie o Json Server na porta 8000
-$ json-server --watch db.json --port 8000
-
-# O API inciará na porta:8000 - acesse http://localhost:8000/posts
-```
   
 ### license  
 [MIT license](https://github.com/RicardoBaltazar/Ecoleta-Frontend-Javascript/blob/master/LICENSE)
