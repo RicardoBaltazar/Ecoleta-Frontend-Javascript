@@ -1,4 +1,4 @@
-const api = 'http://localhost:8000/posts'
+const api = 'https://api-ecoleta-jsonserver.herokuapp.com/posts'
 var card = document.querySelector('#card')
 
 var images = [

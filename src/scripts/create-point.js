@@ -71,7 +71,8 @@ buttonForm.addEventListener('submit', function(event){
         'items' : selectedItems
     }
 
-    fetch('http://localhost:8000/posts', {
+    //fetch('http://localhost:8000/posts', {
+    fetch('https://api-ecoleta-jsonserver.herokuapp.com/posts', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'    },
     body: JSON.stringify(body),
