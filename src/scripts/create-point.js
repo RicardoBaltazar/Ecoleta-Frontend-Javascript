@@ -1,3 +1,14 @@
+var buttonForm = document.querySelector('form')
+let modal = document.querySelector('.modal')
+
+buttonForm.addEventListener('submit', function(event){
+    event.preventDefault()
+    alert('ok')
+})
+
+
+
+/*
 var entityName = document.querySelector('#entityName')
 var address = document.querySelector('#address')
 var addressNumber = document.querySelector('#address2')
@@ -87,3 +98,4 @@ buttonForm.addEventListener('submit', function(event){
 
     showModalConfirm()
 })
+*/
