@@ -24,7 +24,7 @@
             </a>
         </header>
 
-        <form action="#" method="POST">
+        <form action="config.php" method="POST">
             <h1>Cadastro de ponto de coleta</h1>
 
             <fieldset>
@@ -34,31 +34,31 @@
 
                 <div class="field">
                     <label for="name">Nome da entidade</label>
-                    <input type="text" name="name" id="entityName" required>
+                    <input type="text" name="name" id="entityName" >
                 </div>
 
                 <div class="field-group">
                     <div class="field">
                         <label for="address">Endereço</label>
-                        <input type="text" name="address" id="address" required>
+                        <input type="text" name="address" id="address" >
                     </div>
                 </div>
 
                 <div class="field">
                     <label for="address2">Número/Complemento</label>
-                    <input type="text" name="address2" id="address2" required>
+                    <input type="text" name="address2" id="address2" >
                 </div>
 
                 <div class="field-group">
                     <div class="field">
                         <label for="state">Estado</label>
-                        <input type="text" id="uf" placeholder="Digite o Estado">
+                        <input type="text" name="state" id="uf" placeholder="Digite o Estado">
                     </div>
 
                     <div class="field">
                         <label for="city">Cidade</label>
-                        <input type="text" id="city" placeholder="Digite a Cidade" disabled>
-                        <input type="hidden" name="state">
+                        <input type="text" id="city" name="city" placeholder="Digite a Cidade">
+                        <input type="hidden" name="city">
                     </div>
                 </div>
             </fieldset>
@@ -69,7 +69,58 @@
                 </legend>
 
                 <div class="items-grid">
-                    <li data-id="Lâmpadas">
+                    <li id="Lâmpadas" name=''>
+                        <input type="checkbox" name="lamp" id="lamp" value="Lâmpada">
+                        <label for="lamp">
+                            <img src="./src//assets/lampadas.svg" alt="lâmpadas">
+                            Lâmpada
+                        </label>
+                    </li>
+
+                    <li id="Pilhas e Baterias" name=''>
+                        <input type="checkbox" name="batteries" id="batteries" value="Pilhas e Baterias">
+                        <label for="batteries">
+                            <img src="./src/assets/baterias.svg" alt="Pilhas e Baterias">
+                            Pilhas e Baterias
+                        </label>
+                    </li>
+
+                    <li id="Papéis e Papelão" name=''>
+                        <input type="checkbox" name="papers" id="papers" value="Papéis e Papelão">
+                        <label for="papers">
+                            <img src="./src//assets/papeis-papelao.svg" alt="Papéis e Papelão">
+                            Papéis e Papelão
+                        </label>
+                    </li>
+
+                    <li data-id="Resíduos Eletrônicos" name=''>
+                        <input type="checkbox" name="eletronic" id="eletronic" value="Resíduos Eletrônicos">
+                        <label for="eletronic">
+                            <img src="./src//assets//eletronicos.svg" alt="Resíduos Eletrônicos">
+                            Resíduos Eletrônicos
+                        </label>
+                    </li>
+
+                    <li data-id="Resíduos Orgânicos" name=''>
+                        <input type="checkbox" name="organic" id="organic" value="Resíduos Orgânicos">
+                        <label for="organic">
+                            <img src="./src//assets//organicos.svg" alt="Resíduos Orgânicos">
+                            Resíduos Orgânicos
+                        </label>
+                    </li>
+
+                    <li id="Óleos de Cozinha" name=''>
+                        <input type="checkbox" name="oil" id="oil" value="Óleos de Cozinha">
+                        <label for="oil">
+                            <img src="./src//assets//oleo.svg" alt="Óleos de Cozinha">
+                            Óleos de Cozinha
+                        </label>
+                    </li>
+
+                </div>
+                <!--
+                <div class="items-grid">
+                    <li data-id="Lâmpadas" name=''>
                         <img src="./src/assets/lampadas.svg" alt="lampadas">
                         <span>Lâmpadas</span>
                     </li>
@@ -102,6 +153,7 @@
 
                 <input type="hidden" name="items">
             </fieldset>
+            -->
 
             <button type="submit" id="buttonForm">Cadastrar ponto de coleta</button>
         </form>
@@ -116,6 +168,6 @@
         </div>
     </div>
 
-    <script src="./src/scripts/create-point.js"></script>
+    <!--<script src="./src/scripts/create-point.js"></script>-->
 </body>
 </html>
