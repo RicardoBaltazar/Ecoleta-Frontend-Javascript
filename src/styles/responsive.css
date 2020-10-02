@@ -69,8 +69,18 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    .page-search-results{
+        width: 90%;
+    }
+
     .page-search-results img{
         width: 500px;
+    }
+
+    .page-search-results main .cards{
+        display: grid;
+        grid-template-columns: 0;
+        gap: 0px;
     }
 }
 
