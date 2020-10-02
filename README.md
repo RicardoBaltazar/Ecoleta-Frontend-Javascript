@@ -1,6 +1,7 @@
 # Ecoleta 
   
-![ecoleta-php](https://user-images.githubusercontent.com/56805229/94952396-4d2ba200-04bc-11eb-939a-cb5a23afb839.gif)  
+<img src="https://user-images.githubusercontent.com/56805229/94953083-55d0a800-04bd-11eb-9376-e3a6c98c6f79.png" alt="ecoleta-php" width="500"/>
+<img src="https://user-images.githubusercontent.com/56805229/94952396-4d2ba200-04bc-11eb-939a-cb5a23afb839.gif" alt="ecoleta-php" width="500"/>
   
 ### Sobre  
 Ecoleta é uma aplicação web para registro de pontos de coleta de resíduos como pilhas, baterias, lâmpadas, entre outros que te ajuda a encontrar o ponto de coleta mais perto de você. O Front end do projeto foi criado no evento Next Level Week da Rocketseat para fins de estudo. O backend decidi fazer com PHP  e usar o banco de dados Mysql também para fins de estudo. 
